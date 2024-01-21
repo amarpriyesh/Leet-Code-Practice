@@ -33,8 +33,7 @@ class Solution {
                           
                               for (int i = 0; i < l1.size(); i++) {
                                   if (!l1.get(i).equals(l2.get(i))) {
-                                          System.out.println(l1.get(i));
-          System.out.println(l2.get(i)); 
+                                        
                                       return false;
                                   }
                               }

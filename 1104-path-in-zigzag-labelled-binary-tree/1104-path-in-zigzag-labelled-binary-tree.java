@@ -16,7 +16,6 @@ class Solution {
         }
         
         while (pos != 1) {
-            System.out.println(pos);
             in.add(label);
             int child = (int) pos / 2;
             level --;

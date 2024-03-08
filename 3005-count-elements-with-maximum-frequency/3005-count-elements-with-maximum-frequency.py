@@ -1,18 +1,18 @@
 class Solution:
     def maxFrequencyElements(self, nums: List[int]) -> int:
         customDict = {}
+        freq  = 0
         for k in nums:
-            customDict[k] = customDict.get(k, 0) + 1
+            curr = customDict.get(k, 0) + 1
+            freq = max(freq, curr)
+            customDict[k] =  curr
         
-        k = list(customDict.items())
-            
-        k.sort(key = lambda x: -x[1])
-        val = k[0][1]
         res = 0
-        i = 0
-        while( i < len(k) and k[i][1] == val ):
-            res +=  k[i][1]
-            i += 1
+        for j in customDict.keys():
+            if customDict[j] == freq:
+                res += freq
+            
+      
         
         
         
